@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --font-heading: 'HelveticaNowDisplay-Medium', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'HelveticaNowDisplayW01-Rg', 'Helvetica Neue', Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Artistic Flair Theme - Radial Gradient Backdrop */
+.mainframe-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 70% 50%, #2a2a2a 0%, #000000 100%);
+}
+
+.blurred-label {
+  filter: blur(3px);
+  opacity: 0.8;
+}
+
+.action-pill {
+  transition: background 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.action-pill:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.outline-pill {
+  transition: background 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.outline-pill:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background-color: #ffffff;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
