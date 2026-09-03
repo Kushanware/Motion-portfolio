@@ -16,22 +16,29 @@ export default function App() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handlePillClick = (label: string) => {
-    if (label === 'Come work here') {
-      const el = document.getElementById('openings');
+    if (label === 'BUG: AI Accessibility' || label === 'ResumeCheck Pro' || label === 'Selected Works') {
+      const el = document.getElementById('projects');
       if (el) {
         const offset = Math.max(0, el.getBoundingClientRect().top + window.pageYOffset - 80);
         window.scrollTo({ top: offset, behavior: 'smooth' });
         return;
       }
-    } else if (label === 'See how we operate') {
-      const el = document.getElementById('labs');
+    } else if (label === 'About Kush' || label === 'About') {
+      const el = document.getElementById('about');
       if (el) {
         const offset = Math.max(0, el.getBoundingClientRect().top + window.pageYOffset - 80);
         window.scrollTo({ top: offset, behavior: 'smooth' });
         return;
       }
-    } else if (label === 'Pitch us an idea' || label === 'Send a brief hello') {
-      const el = document.getElementById('contact');
+    } else if (label === 'Skills & Core CS' || label === 'Technical Stack' || label === 'Skills') {
+      const el = document.getElementById('skills');
+      if (el) {
+        const offset = Math.max(0, el.getBoundingClientRect().top + window.pageYOffset - 80);
+        window.scrollTo({ top: offset, behavior: 'smooth' });
+        return;
+      }
+    } else if (label === 'Hackathons & Awards' || label === 'Achievements') {
+      const el = document.getElementById('achievements');
       if (el) {
         const offset = Math.max(0, el.getBoundingClientRect().top + window.pageYOffset - 80);
         window.scrollTo({ top: offset, behavior: 'smooth' });
@@ -140,9 +147,9 @@ export default function App() {
                 <div className="w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center mx-auto text-xl mb-3">
                   &#10003;
                 </div>
-                <p className="text-lg font-medium">Transmission Received</p>
+                <p className="text-lg font-medium">Transmission Confirmed</p>
                 <p className="text-sm text-white/60">
-                  A.R.I.A has routed your note to the Mainframe core team.
+                  A.R.I.A has routed your dispatch directly to Kushkumar Shanware.
                 </p>
               </div>
             ) : (
@@ -170,7 +177,7 @@ export default function App() {
                     htmlFor="modal-message-input"
                     className="block text-xs uppercase tracking-wider text-white/60 mb-1.5"
                   >
-                    Message or Brief
+                    Message or Project Scope
                   </label>
                   <textarea
                     id="modal-message-input"
@@ -178,29 +185,21 @@ export default function App() {
                     required
                     value={modalMessage}
                     onChange={(e) => setModalMessage(e.target.value)}
-                    placeholder={
-                      activeModal === 'Pitch us an idea'
-                        ? 'Tell us what you want to build...'
-                        : activeModal === 'Come work here'
-                        ? 'Link to your portfolio or github...'
-                        : activeModal === 'See how we operate'
-                        ? 'What would you like to explore regarding our workflows?'
-                        : 'Say hello...'
-                    }
+                    placeholder="Share your inquiry, internship/role opportunity, or engineering questions for Kushkumar..."
                     className="w-full bg-white/5 border border-white/15 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-white/30 focus:outline-none focus:border-white/50 transition-colors resize-none"
                   />
                 </div>
 
                 <div className="pt-2 flex items-center justify-between">
                   <span className="text-xs text-white/40">
-                    Direct: hello@mainframe.co
+                    Direct: Shanwarekush@gmail.com
                   </span>
                   <button
                     type="submit"
                     id="modal-submit-button"
                     className="inline-flex items-center justify-center bg-white text-black font-medium text-sm px-5 py-2 rounded-full hover:bg-black hover:text-white border border-white/20 transition-colors duration-200 cursor-pointer"
                   >
-                    Transmit
+                    Transmit to Kush
                   </button>
                 </div>
               </form>

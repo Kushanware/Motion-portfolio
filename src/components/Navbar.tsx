@@ -67,13 +67,13 @@ export default function Navbar({ onContactClick }: NavbarProps) {
           className="flex flex-row items-center gap-3 cursor-pointer select-none group"
         >
           <span
-            className="text-[22px] sm:text-[26px] tracking-tight text-white font-medium"
+            className="text-[20px] sm:text-[24px] tracking-tight text-white font-medium"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Mainframe&reg;
+            Kushkumar Shanware
           </span>
           <span
-            className="text-[26px] sm:text-[30px] text-white select-none leading-none"
+            className="text-[24px] sm:text-[28px] text-white select-none leading-none"
             style={{ letterSpacing: '-0.02em' }}
             aria-hidden="true"
           >
@@ -84,38 +84,38 @@ export default function Navbar({ onContactClick }: NavbarProps) {
         {/* Desktop nav links (center, hidden below md) */}
         <div
           id="desktop-nav-links"
-          className="hidden md:flex flex-row items-center gap-1 text-[23px] text-white"
+          className="hidden md:flex flex-row items-center gap-1 text-[21px] text-white"
         >
           <a
-            href="#labs"
-            onClick={(e) => scrollToAnchor(e, 'labs')}
+            href="#projects"
+            onClick={(e) => scrollToAnchor(e, 'projects')}
             className="hover:opacity-60 transition-opacity duration-200"
           >
-            Labs
+            Projects
           </a>
           <span>, </span>
           <a
-            href="#studio"
-            onClick={(e) => scrollToAnchor(e, 'studio')}
+            href="#about"
+            onClick={(e) => scrollToAnchor(e, 'about')}
             className="hover:opacity-60 transition-opacity duration-200"
           >
-            Studio
+            About
           </a>
           <span>, </span>
           <a
-            href="#openings"
-            onClick={(e) => scrollToAnchor(e, 'openings')}
+            href="#skills"
+            onClick={(e) => scrollToAnchor(e, 'skills')}
             className="hover:opacity-60 transition-opacity duration-200"
           >
-            Openings
+            Skills
           </a>
           <span>, </span>
           <a
-            href="#shop"
-            onClick={(e) => scrollToAnchor(e, 'shop')}
+            href="#achievements"
+            onClick={(e) => scrollToAnchor(e, 'achievements')}
             className="hover:opacity-60 transition-opacity duration-200"
           >
-            Shop
+            Achievements
           </a>
         </div>
 
@@ -164,37 +164,37 @@ export default function Navbar({ onContactClick }: NavbarProps) {
         }`}
       >
         <a
-          href="#labs"
-          onClick={(e) => scrollToAnchor(e, 'labs')}
+          href="#projects"
+          onClick={(e) => scrollToAnchor(e, 'projects')}
           className="text-[32px] font-medium text-white hover:opacity-60 transition-opacity duration-200"
         >
-          Labs
+          Projects
         </a>
         <a
-          href="#studio"
-          onClick={(e) => scrollToAnchor(e, 'studio')}
+          href="#about"
+          onClick={(e) => scrollToAnchor(e, 'about')}
           className="text-[32px] font-medium text-white hover:opacity-60 transition-opacity duration-200"
         >
-          Studio
+          About
         </a>
         <a
-          href="#openings"
-          onClick={(e) => scrollToAnchor(e, 'openings')}
+          href="#skills"
+          onClick={(e) => scrollToAnchor(e, 'skills')}
           className="text-[32px] font-medium text-white hover:opacity-60 transition-opacity duration-200"
         >
-          Openings
+          Skills
         </a>
         <a
-          href="#shop"
-          onClick={(e) => scrollToAnchor(e, 'shop')}
+          href="#achievements"
+          onClick={(e) => scrollToAnchor(e, 'achievements')}
           className="text-[32px] font-medium text-white hover:opacity-60 transition-opacity duration-200"
         >
-          Shop
+          Achievements
         </a>
         <a
           href="#contact"
           onClick={handleContactClick}
-          className="text-[32px] font-medium text-white underline underline-offset-4 hover:opacity-60 transition-opacity duration-200 pt-2"
+          className="text-[32px] font-medium text-white underline underline-offset-4 hover:opacity-60 transition-opacity duration-200 pt-4"
         >
           Get in touch
         </a>

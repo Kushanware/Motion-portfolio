@@ -11,9 +11,9 @@ export default function HeroSection({ onPillClick }: HeroSectionProps) {
 
   // Typewriter hook
   const { displayed, done } = useTypewriter(
-    'Glad you stopped in. Good taste tends to find us. Now, what are we building?',
-    38,
-    600
+    'IT Engineer & Builder. Specializing in C++, computer vision with MediaPipe, and on-device Gemini AI pipelines. What are we building together?',
+    34,
+    500
   );
 
   // Action pill buttons become visible 400ms after page load
@@ -27,7 +27,7 @@ export default function HeroSection({ onPillClick }: HeroSectionProps) {
   const handleCopyEmail = (e: MouseEvent) => {
     e.preventDefault();
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText('hello@mainframe.co').catch(() => {
+      navigator.clipboard.writeText('Shanwarekush@gmail.com').catch(() => {
         // Fallback if needed
       });
     }
@@ -63,7 +63,7 @@ export default function HeroSection({ onPillClick }: HeroSectionProps) {
         >
           Hey there, meet A.R.I.A,
           <br />
-          Mainframe&apos;s Adaptive Response Interface Agent
+          Kushkumar Shanware&apos;s Adaptive Portfolio Agent
         </div>
 
         {/* 2. Typewriter text */}
@@ -99,38 +99,38 @@ export default function HeroSection({ onPillClick }: HeroSectionProps) {
           {/* 4 White pill buttons */}
           <button
             type="button"
-            id="pill-pitch"
-            onClick={() => handlePillClick('Pitch us an idea')}
+            id="pill-bug"
+            onClick={() => handlePillClick('BUG: AI Accessibility')}
             className="action-pill inline-flex items-center justify-center bg-white text-black border border-black/10 rounded-full text-[15px] px-5 py-[0.4em] mx-[0.2em] mb-[0.4em] whitespace-nowrap font-medium"
           >
-            Pitch us an idea
+            BUG: AI Accessibility
           </button>
 
           <button
             type="button"
-            id="pill-work"
-            onClick={() => handlePillClick('Come work here')}
+            id="pill-resumecheck"
+            onClick={() => handlePillClick('ResumeCheck Pro')}
             className="action-pill inline-flex items-center justify-center bg-white text-black border border-black/10 rounded-full text-[15px] px-5 py-[0.4em] mx-[0.2em] mb-[0.4em] whitespace-nowrap font-medium"
           >
-            Come work here
+            ResumeCheck Pro
           </button>
 
           <button
             type="button"
-            id="pill-hello"
-            onClick={() => handlePillClick('Send a brief hello')}
+            id="pill-skills"
+            onClick={() => handlePillClick('Skills & Core CS')}
             className="action-pill inline-flex items-center justify-center bg-white text-black border border-black/10 rounded-full text-[15px] px-5 py-[0.4em] mx-[0.2em] mb-[0.4em] whitespace-nowrap font-medium"
           >
-            Send a brief hello
+            Skills &amp; Core CS
           </button>
 
           <button
             type="button"
-            id="pill-operate"
-            onClick={() => handlePillClick('See how we operate')}
+            id="pill-achievements"
+            onClick={() => handlePillClick('Hackathons & Awards')}
             className="action-pill inline-flex items-center justify-center bg-white text-black border border-black/10 rounded-full text-[15px] px-5 py-[0.4em] mx-[0.2em] mb-[0.4em] whitespace-nowrap font-medium"
           >
-            See how we operate
+            Hackathons &amp; Awards
           </button>
 
           {/* 1 Outline pill button */}
@@ -138,13 +138,13 @@ export default function HeroSection({ onPillClick }: HeroSectionProps) {
             type="button"
             id="pill-copy-email"
             onClick={handleCopyEmail}
-            title="Click to copy email address"
+            title="Click to copy Kushkumar's email address"
             className="outline-pill inline-flex items-center justify-center text-white bg-transparent border border-white rounded-full text-[15px] px-5 py-[0.4em] mx-[0.2em] mb-[0.4em] whitespace-nowrap font-medium gap-3 transition-colors duration-200 cursor-pointer group"
           >
             <span>
-              Reach us:{' '}
+              Reach Kush:{' '}
               <span className="underline underline-offset-1">
-                hello@mainframe.co
+                Shanwarekush@gmail.com
               </span>
             </span>
 

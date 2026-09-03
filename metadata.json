@@ -1,6 +1,6 @@
 {
   "name": "Mainframe",
-  "description": "Full-screen interactive hero landing page for creative agency Mainframe featuring mouse-scrub video, typewriter introduction, and responsive navigation.",
+  "description": "Portfolio of Kushkumar Shanware — Information Technology student at Priyadarshini College of Engineering, Nagpur. Specializing in C++, computer vision with MediaPipe, Gemini Nano, and multimodal AI pipelines.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
