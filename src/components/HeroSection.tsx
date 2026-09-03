@@ -49,21 +49,21 @@ export default function HeroSection({ onPillClick }: HeroSectionProps) {
       className="relative z-10 w-full min-h-[768px] h-screen h-[100dvh] flex flex-col justify-end pb-12 md:justify-center md:pb-0 px-6 sm:px-8 md:px-10 overflow-hidden select-none sm:select-text"
     >
       {/* Content Container */}
-      <div id="hero-content-container" className="max-w-xl relative z-10">
+      <div id="hero-content-container" className="max-w-xl relative z-10 ml-auto">
         
-        {/* 1. Blurred intro label */}
+        {/* 1. Intro label */}
         <div
-          id="hero-blurred-label"
-          className="blurred-label mb-6 select-none pointer-events-none text-white"
+          id="hero-intro-label"
+          className="mb-6 select-none pointer-events-none text-white"
           style={{
             fontSize: 'clamp(18px, 4vw, 26px)',
             lineHeight: 1.3,
             fontWeight: 400,
           }}
         >
-          Hey there, meet A.R.I.A,
+          Welcome to the interactive portfolio of
           <br />
-          Kushkumar Shanware&apos;s Adaptive Portfolio Agent
+          Kushkumar Shanware
         </div>
 
         {/* 2. Typewriter text */}

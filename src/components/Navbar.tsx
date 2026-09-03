@@ -51,7 +51,7 @@ export default function Navbar({ onContactClick }: NavbarProps) {
     <>
       <nav
         id="navbar"
-        className="fixed top-0 left-0 right-0 w-full z-20 px-6 sm:px-8 py-5 flex flex-row justify-between items-center bg-black/30 backdrop-blur-sm transition-all duration-300"
+        className="fixed top-0 left-0 right-0 w-full z-20 px-6 sm:px-8 py-5 flex flex-row justify-between items-center bg-black/40 backdrop-blur-md border-b border-white/10 transition-all duration-300"
       >
         {/* Logo (left) */}
         <a
@@ -64,16 +64,16 @@ export default function Navbar({ onContactClick }: NavbarProps) {
               window.history.pushState(null, '', window.location.pathname);
             } catch {}
           }}
-          className="flex flex-row items-center gap-3 cursor-pointer select-none group"
+          className="flex flex-row items-center gap-2 cursor-pointer select-none group hover:opacity-80 transition-opacity duration-300"
         >
           <span
-            className="text-[20px] sm:text-[24px] tracking-tight text-white font-medium"
+            className="text-[20px] sm:text-[22px] tracking-tight text-white font-medium"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             Kushkumar Shanware
           </span>
           <span
-            className="text-[24px] sm:text-[28px] text-white select-none leading-none"
+            className="text-[22px] sm:text-[24px] text-white/80 select-none leading-none group-hover:rotate-90 transition-transform duration-500"
             style={{ letterSpacing: '-0.02em' }}
             aria-hidden="true"
           >
@@ -84,36 +84,33 @@ export default function Navbar({ onContactClick }: NavbarProps) {
         {/* Desktop nav links (center, hidden below md) */}
         <div
           id="desktop-nav-links"
-          className="hidden md:flex flex-row items-center gap-1 text-[21px] text-white"
+          className="hidden md:flex flex-row items-center gap-1 text-[15px] font-medium text-white/80 bg-white/5 backdrop-blur-lg border border-white/10 rounded-full px-2 py-1.5 shadow-[0_4px_30px_rgba(0,0,0,0.1)]"
         >
           <a
             href="#projects"
             onClick={(e) => scrollToAnchor(e, 'projects')}
-            className="hover:opacity-60 transition-opacity duration-200"
+            className="px-5 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-300"
           >
             Projects
           </a>
-          <span>, </span>
           <a
             href="#about"
             onClick={(e) => scrollToAnchor(e, 'about')}
-            className="hover:opacity-60 transition-opacity duration-200"
+            className="px-5 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-300"
           >
             About
           </a>
-          <span>, </span>
           <a
             href="#skills"
             onClick={(e) => scrollToAnchor(e, 'skills')}
-            className="hover:opacity-60 transition-opacity duration-200"
+            className="px-5 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-300"
           >
             Skills
           </a>
-          <span>, </span>
           <a
             href="#achievements"
             onClick={(e) => scrollToAnchor(e, 'achievements')}
-            className="hover:opacity-60 transition-opacity duration-200"
+            className="px-5 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-300"
           >
             Achievements
           </a>
@@ -124,7 +121,7 @@ export default function Navbar({ onContactClick }: NavbarProps) {
           id="desktop-cta"
           href="#contact"
           onClick={handleContactClick}
-          className="hidden md:inline-block text-[23px] text-white underline underline-offset-4 hover:opacity-60 transition-opacity duration-200"
+          className="hidden md:inline-flex items-center justify-center text-[15px] font-semibold text-black bg-white px-7 py-2.5 rounded-full hover:bg-gray-200 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-300"
         >
           Get in touch
         </a>

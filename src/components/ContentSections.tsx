@@ -27,14 +27,36 @@ export default function ContentSections({ onOpenModal }: ContentSectionsProps) {
     setTimeout(() => setCopiedPhone(false), 2000);
   };
 
-  const handleInlineContactSubmit = (e: FormEvent) => {
+  const handleInlineContactSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setContactSubmitted(true);
-    setTimeout(() => {
-      setContactSubmitted(false);
-      setContactEmail('');
-      setContactMessage('');
-    }, 3500);
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          access_key: "79e2b239-52e0-4b19-9c50-d9f19f1711ae",
+          email: contactEmail,
+          message: contactMessage,
+        })
+      });
+
+      if (response.ok) {
+        setContactSubmitted(true);
+        setTimeout(() => {
+          setContactSubmitted(false);
+          setContactEmail('');
+          setContactMessage('');
+        }, 4000);
+      } else {
+        alert("Something went wrong submitting the form. Please try again.");
+      }
+    } catch (error) {
+      alert("Something went wrong submitting the form. Please check your connection.");
+    }
   };
 
   const scrollToTop = () => {

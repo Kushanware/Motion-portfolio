@@ -10,7 +10,7 @@ export default function BackgroundVideo({ customSrc, onCustomVideoLoaded }: Back
   const prevXRef = useRef<number | null>(null);
   const targetTimeRef = useRef<number>(0);
   const isSeekingRef = useRef<boolean>(false);
-  const [videoSrc, setVideoSrc] = useState<string>(customSrc || '/aria.mp4');
+  const [videoSrc, setVideoSrc] = useState<string>(customSrc || '/aria_optimized_v2.mp4');
 
   // Keep videoSrc synced with customSrc prop if changed externally
   useEffect(() => {
@@ -174,7 +174,6 @@ export default function BackgroundVideo({ customSrc, onCustomVideoLoaded }: Back
       ref={videoRef}
       id="hero-background-video"
       src={videoSrc}
-      muted
       playsInline
       preload="auto"
       className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none select-none"
