@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react';
+import TerminalWidget from './TerminalWidget';
 
 interface ContentSectionsProps {
   onOpenModal: (topic: string) => void;
@@ -296,29 +297,8 @@ export default function ContentSections({ onOpenModal }: ContentSectionsProps) {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
             
-            {/* Bio summary */}
-            <div className="lg:col-span-7 bg-[#121212]/80 backdrop-blur-sm border border-white/15 rounded-2xl p-8 space-y-5">
-              <h3 className="text-2xl font-medium text-white">
-                Tech-focused problem solver with an obsession for computer vision, AI APIs, and algorithmic efficiency.
-              </h3>
-              <p className="text-white/70 text-base leading-relaxed">
-                I am <span className="text-white font-medium">Kushkumar Shanware</span>, an Information Technology engineering undergraduate based in Nagpur, Maharashtra, India.
-              </p>
-              <p className="text-white/70 text-base leading-relaxed">
-                With strong fundamentals in C++, Data Structures &amp; Algorithms (DSA), and Object-Oriented Programming (OOP), I bridge the gap between algorithmic rigor and modern AI interfaces. My ongoing capstone work focuses on computer vision accessibility with MediaPipe and on-device Gemini Nano.
-              </p>
-              <div className="pt-4 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                <div>
-                  <div className="text-xs font-mono text-white/40">LOCATION</div>
-                  <div className="text-white font-medium mt-0.5">Nagpur, Maharashtra, India</div>
-                </div>
-                <div>
-                  <div className="text-xs font-mono text-white/40">CONTACT CHANNELS</div>
-                  <div className="text-white font-medium mt-0.5">Shanwarekush@gmail.com</div>
-                  <div className="text-xs text-white/50 font-mono mt-0.5">+91-7058051975</div>
-                </div>
-              </div>
-            </div>
+            {/* Bio summary (Terminal Widget) */}
+            <TerminalWidget />
 
             {/* Education details */}
             <div className="lg:col-span-5 space-y-4">

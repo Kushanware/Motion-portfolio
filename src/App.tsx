@@ -81,6 +81,9 @@ export default function App() {
       {/* Artistic Flair Radial Backdrop */}
       <div className="mainframe-bg pointer-events-none" />
 
+      {/* Cinematic Grain Overlay */}
+      <div className="grain-overlay" />
+
       {/* Fixed Full-screen Background Video (smooth mouse-scrub and scroll interpolated) */}
       <BackgroundVideo />
 

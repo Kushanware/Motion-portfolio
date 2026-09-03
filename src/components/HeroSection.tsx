@@ -133,6 +133,16 @@ export default function HeroSection({ onPillClick }: HeroSectionProps) {
             Hackathons &amp; Awards
           </button>
 
+          <a
+            id="pill-view-resume"
+            href="https://drive.google.com/file/d/1XTxzlmZCFvgsci8d8vGV29ch-azxHFxQ/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            className="action-pill inline-flex items-center justify-center bg-white text-black border border-black/10 rounded-full text-[15px] px-5 py-[0.4em] mx-[0.2em] mb-[0.4em] whitespace-nowrap font-medium hover:bg-black hover:text-white transition-colors"
+          >
+            View Resume
+          </a>
+
           {/* 1 Outline pill button */}
           <button
             type="button"
