@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --font-heading: 'HelveticaNowDisplay-Medium', 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Playfair Display', 'HelveticaNowDisplay-Medium', 'Helvetica Neue', Arial, serif;
   --font-body: 'HelveticaNowDisplayW01-Rg', 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
 
 html {

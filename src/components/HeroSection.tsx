@@ -49,7 +49,7 @@ export default function HeroSection({ onPillClick }: HeroSectionProps) {
       className="relative z-10 w-full min-h-[768px] h-screen h-[100dvh] flex flex-col justify-end pb-12 md:justify-center md:pb-0 px-6 sm:px-8 md:px-10 overflow-hidden select-none sm:select-text"
     >
       {/* Content Container */}
-      <div id="hero-content-container" className="max-w-xl relative z-10 ml-auto">
+      <div id="hero-content-container" className="max-w-xl relative z-10 mx-auto lg:ml-auto lg:mx-0 flex flex-col items-center lg:items-start text-center lg:text-left bg-black/20 backdrop-blur-md border border-white/10 rounded-3xl p-6 sm:p-8 shadow-2xl">
         
         {/* 1. Intro label */}
         <div
@@ -89,7 +89,7 @@ export default function HeroSection({ onPillClick }: HeroSectionProps) {
         {/* 3. Action pill buttons */}
         <div
           id="hero-action-pills-container"
-          className={`flex flex-wrap gap-y-1 ${
+          className={`flex flex-wrap gap-y-1 justify-center lg:justify-start ${
             pillsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[8px]'
           }`}
           style={{

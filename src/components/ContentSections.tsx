@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react';
+import { motion } from 'motion/react';
 import TerminalWidget from './TerminalWidget';
 
 interface ContentSectionsProps {
@@ -73,9 +74,13 @@ export default function ContentSections({ onOpenModal }: ContentSectionsProps) {
       <div className="w-full bg-gradient-to-b from-transparent via-black/85 to-black pt-24 pb-16">
         
         {/* ================= FEATURED PROJECTS SECTION ================= */}
-        <section
+        <motion.section
           id="projects"
           className="max-w-6xl mx-auto px-6 sm:px-8 py-20 scroll-mt-24 border-t border-white/10"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
         >
           {/* Also support #works alias */}
           <span id="works" className="scroll-mt-24 block" aria-hidden="true" />
@@ -274,12 +279,16 @@ export default function ContentSections({ onOpenModal }: ContentSectionsProps) {
             </div>
 
           </div>
-        </section>
+        </motion.section>
 
         {/* ================= ABOUT & EDUCATION SECTION ================= */}
-        <section
+        <motion.section
           id="about"
           className="max-w-6xl mx-auto px-6 sm:px-8 py-20 scroll-mt-24 border-t border-white/10"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
         >
           <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-4 mb-12">
             <div>
@@ -345,12 +354,16 @@ export default function ContentSections({ onOpenModal }: ContentSectionsProps) {
             </div>
 
           </div>
-        </section>
+        </motion.section>
 
         {/* ================= TECHNICAL SKILLS SECTION ================= */}
-        <section
+        <motion.section
           id="skills"
           className="max-w-6xl mx-auto px-6 sm:px-8 py-20 scroll-mt-24 border-t border-white/10"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
         >
           {/* Also support #stack alias */}
           <span id="stack" className="scroll-mt-24 block" aria-hidden="true" />
@@ -464,12 +477,16 @@ export default function ContentSections({ onOpenModal }: ContentSectionsProps) {
             </div>
 
           </div>
-        </section>
+        </motion.section>
 
         {/* ================= HACKATHONS & ACHIEVEMENTS SECTION ================= */}
-        <section
+        <motion.section
           id="achievements"
           className="max-w-6xl mx-auto px-6 sm:px-8 py-20 scroll-mt-24 border-t border-white/10"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
         >
           {/* Also support #philosophy alias */}
           <span id="philosophy" className="scroll-mt-24 block" aria-hidden="true" />
@@ -539,12 +556,16 @@ export default function ContentSections({ onOpenModal }: ContentSectionsProps) {
             </div>
 
           </div>
-        </section>
+        </motion.section>
 
         {/* ================= CONTACT SECTION ================= */}
-        <section
+        <motion.section
           id="contact"
           className="max-w-6xl mx-auto px-6 sm:px-8 py-20 scroll-mt-24 border-t border-white/10"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
@@ -673,7 +694,7 @@ export default function ContentSections({ onOpenModal }: ContentSectionsProps) {
             </div>
 
           </div>
-        </section>
+        </motion.section>
 
         {/* ================= FOOTER ================= */}
         <footer className="max-w-6xl mx-auto px-6 sm:px-8 pt-16 pb-12 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-white/40 font-mono">

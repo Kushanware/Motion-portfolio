@@ -176,10 +176,8 @@ export default function BackgroundVideo({ customSrc, onCustomVideoLoaded }: Back
       src={videoSrc}
       playsInline
       preload="auto"
-      className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none select-none"
-      style={{
-        objectPosition: '70% center',
-      }}
+      muted
+      className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none select-none object-[25%_center] md:object-[35%_center] lg:object-[70%_center]"
     />
   );
 }

@@ -40,6 +40,7 @@ export default function TerminalWidget() {
   about     - View my bio and background
   skills    - View technical stack
   projects  - View featured works
+  github    - Fetch live GitHub activity
   contact   - Get my email and phone number
   resume    - View my official resume
   clear     - Clear the terminal`;
@@ -75,6 +76,28 @@ Location: Nagpur, India`;
         output = `RESUME LINK:
 https://drive.google.com/file/d/1XTxzlmZCFvgsci8d8vGV29ch-azxHFxQ/view?usp=sharing`;
         break;
+      case 'github':
+        setHistory((prev) => [
+          ...prev,
+          { type: 'input', text: `user@guest:~$ ${cmd}` },
+          { type: 'output', text: 'Fetching live data from GitHub API...' }
+        ]);
+        
+        fetch('https://api.github.com/users/Kushkumar-Shanware')
+          .then(res => res.json())
+          .then(data => {
+            const bio = data.bio ? `\nBIO: ${data.bio}` : '';
+            const out = `GITHUB PROFILE: Kushkumar-Shanware
+REPOSITORIES: ${data.public_repos}
+FOLLOWERS: ${data.followers}${bio}
+URL: ${data.html_url}`;
+            setHistory(prev => [...prev, { type: 'output', text: out }]);
+          })
+          .catch(() => {
+            setHistory(prev => [...prev, { type: 'output', text: 'Error connecting to GitHub API.' }]);
+          });
+        return; // Early return because we handled history state asynchronously
+        
       case 'clear':
         setHistory([]);
         return;
