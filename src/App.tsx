@@ -73,14 +73,36 @@ export default function App() {
     setIsSubmitted(false);
   };
 
-  const handleSubmitModal = (e: FormEvent) => {
+  const handleSubmitModal = async (e: FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => {
-      closeModal();
-      setModalEmail('');
-      setModalMessage('');
-    }, 1800);
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          access_key: "79e2b239-52e0-4b19-9c50-d9f19f1711ae",
+          email: modalEmail,
+          message: modalMessage,
+        })
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setTimeout(() => {
+          closeModal();
+          setModalEmail('');
+          setModalMessage('');
+        }, 1800);
+      } else {
+        alert("Something went wrong submitting the form. Please try again.");
+      }
+    } catch (error) {
+      alert("Something went wrong submitting the form. Please check your connection.");
+    }
   };
 
   return (
