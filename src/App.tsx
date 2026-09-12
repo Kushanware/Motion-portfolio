@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, type FormEvent } from 'react';
+import { useState, useEffect, type FormEvent } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import BackgroundVideo from './components/BackgroundVideo';
@@ -14,6 +14,13 @@ export default function App() {
   const [modalEmail, setModalEmail] = useState('');
   const [modalMessage, setModalMessage] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  useEffect(() => {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  }, []);
 
   const handlePillClick = (label: string) => {
     if (label === 'BUG: AI Accessibility' || label === 'ResumeCheck Pro' || label === 'Selected Works') {
